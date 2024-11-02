@@ -1,0 +1,60 @@
+layers:
+  persistence:
+    name: "Data Persistence Services"
+    building_blocks:
+      - event-broker:
+        name: "Event Broker"
+      - file-storage:
+        name: "File Storage"
+      - relational-database:
+        name: "Relational Database"
+      - key-value-store:
+        name: "Key-Value Store"
+      - timeseries-database:
+        name: "Timeseries Database"
+      - olap-datastore:
+        name: "OLAP Datastore"
+      - clinical-data-repository:
+        name: "Clinical Data Repository"
+      - message-broker:
+        name: "Message Broker"
+      - distributed-file-system:
+        name: "Distributed File System"
+      - distributed-sql-database:
+        name: "Distributed SQL Database"
+      - wide-column-store:
+        name: "Wide-Column Store"
+      - graph-database:
+        name: "Graph Database"
+      - vector-database:
+        name: "Vector Database"
+      - event-store:
+        name: "Event Store"
+      - object-storage:
+        name: "Object Storage"
+      - in-memory-database:
+        name: "In-Memory Database"
+      - document-store:
+        name: "Document Store"
+      - rdf-store:
+        name: "RDF Store"
+      - feature-store:
+        name: "Feature Store"
+      - distributed-ledger:
+        name: "Distributed Ledger"
+      - document-management:
+        name: "Document Management"
+      - in-memory-grid:
+        name: "In-Memory Grid"
+      - search-engine-store:
+        name: "Search-Engine Store"
+      - spatial-database:
+        name: "Spatial Database"
+      - streaming-database:
+        name: "Streaming Database"            
+
+mappings:
+  event-broker:
+    - aws.mks
+    - aws.kinesis
+              
