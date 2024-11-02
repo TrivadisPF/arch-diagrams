@@ -44,7 +44,7 @@ layers:
         name: "Distributed Ledger"
       - document-management:
         name: "Document Management"
-      - in-memory-grid:
+      - in-memory-data-grid:
         name: "In-Memory Grid"
       - search-engine-store:
         name: "Search-Engine Store"
