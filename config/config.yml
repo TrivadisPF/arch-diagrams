@@ -1,6 +1,64 @@
 layers:
+  governance_management:
+    name: "Governance & Management"
+    top_left_x: 0
+    top_left_y: -160
+    nof_cols: 10
+    nof_rows: 1
+    building_blocks:
+      - data-catalog:
+        name: "Data Catalog"
+      - event-catalog:
+        name: "Event Catalog"
+      - api-catalog:
+        name: "API Catalog"
+      - api-management:
+        name: "API Management"
+  integration:
+    name: "Integration"
+    top_left_x: 0
+    top_left_y: 0
+    nof_cols: 2
+    nof_rows: 8
+    building_blocks:
+      - managed-data-transfer:
+        name: "Managed Data/File Transfer"
+      - disk-service:
+        name: "Disk Service"
+      - web-crawler:
+        name: "Web Crawler"
+      - data-collector:
+        name: "Data Collector"
+      - batch-data-flow:
+        name: "Batch Data Flow"
+      - stream-data-flow:
+        name: "Stream Data Flow"
+      - change-data-capture:
+        name: "Change Data Capture"
+  batch-driven-apps:
+    name: "Batch-Driven Applications"
+    top_left_x: 180
+    top_left_y: 0
+    nof_cols: 15
+    nof_rows: 1
+    building_blocks:
+      - batch-micro-service:
+        name: "Batch (Micro-)Service"            
+  request-event-process-driven-apps:
+    name: "Request-Driven, Event-Driven and Process-Driven Applications"
+    top_left_x: 180
+    top_left_y: 560
+    nof_cols: 15
+    nof_rows: 1
+    building_blocks:
+      - backend-micro-service:
+        name: "Backend (Micro-)Service"
   persistence:
     name: "Data Persistence Services"
+    top_left_x: 180
+    top_left_y: 160
+    nof_cols: 7
+    nof_rows: 4
     building_blocks:
       - event-broker:
         name: "Event Broker"
@@ -52,6 +110,36 @@ layers:
         name: "Spatial Database"
       - streaming-database:
         name: "Streaming Database"            
+  processing_analysis:
+    name: "Processing & Analytics Services"
+    top_left_x: 660
+    top_left_y: 160
+    nof_cols: 7
+    nof_rows: 4
+    building_blocks:
+      - format-translation:
+        name: "Format Translator"
+      - data-validation:
+        name: "Data Validator"
+      - chatbot:
+        name: "Chatbot"
+      - machine-learning:
+        name: "Machine Learning"
+      - image-video-recognition:
+        name: "Image & Video Recognition"
+      - text-analytics:
+        name: "Text Analytics"
+      - timeseries-analytics:
+        name: "Timeseries Analytics"
+  serving:
+    name: "Serving"
+    top_left_x: 1140
+    top_left_y: 0
+    nof_cols: 2
+    nof_rows: 8
+    building_blocks:
+      - data-science-workbench:
+        name: "Data Science Workbench"
 
 mappings:
   event-broker:
