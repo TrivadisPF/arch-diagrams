@@ -6,11 +6,11 @@ import drawpyo
 from os import path
 
 file = drawpyo.File()
-file.file_path = path.join("/data-transfer/")
+file.file_path = path.join("./out/")
 file.file_name = "Apply_Style_From_String.drawio"
 page = drawpyo.Page(file=file)
 
-with open ("/data-transfer/config.yml", "r") as yml_file:
+with open ("./config/config.yml", "r") as yml_file:
     config = yaml.safe_load(yml_file)
 
 

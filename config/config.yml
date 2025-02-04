@@ -1,10 +1,20 @@
 layers:
+  external_systems:
+    name: "External Systems"
+    top_left_x: 0
+    top_left_y: -160  
+    nof_cols: 2
+    nof_rows: 10      
+    building_blocks:
+      - crm:
+        name: "CRM"
   governance_management:
     name: "Governance & Management"
     top_left_x: 0
     top_left_y: -160
     nof_cols: 10
     nof_rows: 1
+    align_left_with: external_systems
     building_blocks:
       - data-catalog:
         name: "Data Catalog"
@@ -14,12 +24,41 @@ layers:
         name: "API Catalog"
       - api-management:
         name: "API Management"
+  security_compliance:
+    name: "Security & Compliance"
+    top_left_x: 0
+    top_left_y: -160
+    nof_cols: 8
+    nof_rows: 1
+    align_left_with: governance_management
+    building_blocks:
+      - iam:
+        name: "IAM"
+      - secrets-management:
+        name: "Secrets Management"
+      - key-management:
+        name: "Key Management"
+      - policy-engine:
+        name: "Policy Engine"        
+  monitoring_observability:
+    name: "Monitoring & Observability"
+    top_left_x: 0
+    top_left_y: -160
+    nof_cols: 6
+    nof_rows: 1
+    align_left_with: security_compliance
+    building_blocks:
+      - data-lineage:
+        name: "Data Lineage"
+      - data-observability:
+        name: "Data Observability"
   integration:
     name: "Integration"
     top_left_x: 0
     top_left_y: 0
     nof_cols: 2
     nof_rows: 8
+    align_left_with: external_systems
     building_blocks:
       - managed-data-transfer:
         name: "Managed Data/File Transfer"
@@ -41,6 +80,7 @@ layers:
     top_left_y: 0
     nof_cols: 15
     nof_rows: 1
+    align_left_with: integration
     building_blocks:
       - batch-micro-service:
         name: "Batch (Micro-)Service"            
@@ -50,15 +90,25 @@ layers:
     top_left_y: 560
     nof_cols: 15
     nof_rows: 1
+    align_left_with: integration
     building_blocks:
       - backend-micro-service:
         name: "Backend (Micro-)Service"
+      - function-as-a-service:
+        name: "Function-as-a-Service"
+      - low-no-code-apps:
+        name: "Low / No Code Apps"
+      - stream-data-flow:
+        name: "Stream Data Flow"
+      - stream-processing:
+        name: "Stream Processing"                       
   persistence:
     name: "Data Persistence Services"
     top_left_x: 180
     top_left_y: 160
     nof_cols: 7
     nof_rows: 4
+    align_left_with: integration
     building_blocks:
       - event-broker:
         name: "Event Broker"
@@ -92,8 +142,8 @@ layers:
         name: "Object Storage"
       - in-memory-database:
         name: "In-Memory Database"
-      - document-store:
-        name: "Document Store"
+      - document-database:
+        name: "Document Database"
       - rdf-store:
         name: "RDF Store"
       - feature-store:
@@ -116,6 +166,7 @@ layers:
     top_left_y: 160
     nof_cols: 7
     nof_rows: 4
+    align_left_with: persistence
     building_blocks:
       - format-translation:
         name: "Format Translator"
@@ -137,6 +188,7 @@ layers:
     top_left_y: 0
     nof_cols: 2
     nof_rows: 8
+    align_left_with: processing_analysis
     building_blocks:
       - data-science-workbench:
         name: "Data Science Workbench"
